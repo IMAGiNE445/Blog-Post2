@@ -1,5 +1,5 @@
 
-# InternSync: Revolutionizing Internship Management
+# InternSync : Internship Activity Monitoring Portal
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -8,8 +8,7 @@
 - [Proposed Solution: InternSync](#proposed-solution-internsync)
 - [Key Features](#key-features)
 - [Technical Overview](#technical-overview)
-- [Conclusion](#conclusion)
-- [Acknowledgements](#acknowledgements)
+- [Installation](#installation)
 
 ## Introduction
 Internships are a critical bridge between academic learning and real-world experience, especially during the eighth semester of a student's education. However, managing internships has traditionally been a cumbersome process, often relying on outdated methods that hinder effective communication and oversight.
@@ -30,14 +29,13 @@ Traditional internship management systems are fragmented and disconnected, relyi
 InternSync is a comprehensive web and mobile platform designed to streamline the management and tracking of internship activities. By automating and centralizing the internship management process, InternSync enhances communication and oversight for all parties involved.
 
 ### Key Features
-- **Centralized Management**: Automates daily report submissions and provides analytics dashboards for performance monitoring.
+- **Centralized Management**: Automates daily report submission process and provides analytics dashboards for performance monitoring.
 - **Hierarchical Access**: Role-based access for interns, college mentors, company mentors, and administrators ensures efficient management.
 - **Key Modules**:
   - **Attendance Management**
   - **Daily Report Submission**
   - **Internship Management**
   - **Mentor Assignment**
-- **Mobile Application**: Offers seamless access to all functionalities for students and mentors.
 
 ## Technical Overview
 InternSync leverages modern web technologies to provide a robust solution:
@@ -51,7 +49,7 @@ InternSync leverages modern web technologies to provide a robust solution:
 | Next.js    | React framework for building web applications |
 | TypeScript | Typed JavaScript for better tooling |
 | Supabase   | Backend as a Service for real-time capabilities |
-| PostgreSQL | Relational database for data management |
+
 
 ### Hardware Requirements
 | Provider       | CPU                | Memory (RAM) | Storage                   | Bandwidth     |
@@ -59,25 +57,39 @@ InternSync leverages modern web technologies to provide a robust solution:
 | Vercel         | Virtual CPUs (auto-scaled) | Up to 4GB    | Ephemeral storage for serverless functions | 100 GB/month  |
 | Supabase       | Virtual CPUs (auto-scaled) | Dynamic memory allocation | 500 MB database storage | 2 GB/month    |
 
-## Getting Started
+## Installation
+To set up the project locally, follow these steps:
 
-First, run the development server:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/internsync.git
+   cd internsync
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. **Install dependencies**:
+   For the web application:
+   ```bash
+   cd web
+   npm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Set up environment variables**:
+   Create a `.env.local` file in the web directory and add your Supabase credentials:
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. **Run the application**:
+   For the web application:
+   ```bash
+   npm run dev
+   ```
+
+
+5. Open [http://localhost:3000](http://localhost:3000) on your browser to see the result.
+
 
 ## Learn More
 
