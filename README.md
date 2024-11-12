@@ -89,7 +89,7 @@ To set up the project locally, follow these steps:
 - Add SQL Queries and Functions:
   - In the SQL Editor in Supabase, add the necessary SQL queries and functions.
   - Run each script directly in the editor.
-  - Note : The Supabase Functions are provided in the repository folder at ![supabase/sql/](https://github.com/Swaraj2004/supabase/sql/)
+  - Note : The Supabase Functions are provided in the repository folder at ![supabase/sql](https://github.com/Swaraj2004/supabase/sql)
 
 4. **Set up environment variables**:
    Create a `.env.local` file in the web directory and add your Supabase credentials:
