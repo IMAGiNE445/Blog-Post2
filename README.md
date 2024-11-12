@@ -79,6 +79,11 @@ To set up the project locally, follow these steps:
    ```
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
+   NEXT_PUBLIC_URL=http://localhost:3000
+   SMTP_USER=your_smtp_email
+   SMTP_PASSWORD=your_smtp_app_password
+   
    ```
 
 4. **Run the application**:
