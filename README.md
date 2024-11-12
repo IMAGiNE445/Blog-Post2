@@ -72,9 +72,26 @@ To set up the project locally, follow these steps:
    cd web
    npm install
    ```
+3. Set up Supabase:
+- Create a Supabase Account:
+  - Go to Supabase and sign up for a free account.
+  - Create a new project in your dashboard.
 
+- Add Email Providers (SMTP):
+    In Supabase, go to Authentication > Settings > Email provider and configure your SMTP details.
+  
+- Update Email Templates:
+    Customize email templates under Authentication > Templates in Supabase as needed.
+  
+- Configure URL Settings:
+    In Settings > Site URL, add http://localhost:3000 for local development.
+  
+- Add SQL Queries and Functions:
+  - In the SQL Editor in Supabase, add the necessary SQL queries and functions.
+  - Run each script directly in the editor.
+  - Note : The Supabase Functions are provided in the repository folder at ![supabase/sql/](supabase/sql/)
 
-3. **Set up environment variables**:
+4. **Set up environment variables**:
    Create a `.env.local` file in the web directory and add your Supabase credentials:
    ```
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
@@ -83,17 +100,16 @@ To set up the project locally, follow these steps:
    NEXT_PUBLIC_URL=http://localhost:3000
    SMTP_USER=your_smtp_email
    SMTP_PASSWORD=your_smtp_app_password
-   
    ```
 
-4. **Run the application**:
+5. **Run the application**:
    For the web application:
    ```bash
    npm run dev
    ```
 
 
-5. Open [http://localhost:3000](http://localhost:3000) on your browser to see the result.
+6. Open [http://localhost:3000](http://localhost:3000) on your browser to see the result.
 
 
 ## Learn More
