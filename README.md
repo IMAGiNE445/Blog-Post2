@@ -3,30 +3,13 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [The Problem](#the-problem)
-- [Existing Systems](#existing-systems)
-- [Proposed Solution: InternSync](#proposed-solution-internsync)
 - [Key Features](#key-features)
 - [Technical Overview](#technical-overview)
 - [Installation](#installation)
 
 ## Introduction
-Internships are a critical bridge between academic learning and real-world experience, especially during the eighth semester of a student's education. However, managing internships has traditionally been a cumbersome process, often relying on outdated methods that hinder effective communication and oversight.
-
-## The Problem
-The current landscape of internship management is riddled with challenges:
-- **Inefficient Communication**: Interns often lack timely feedback from mentors, leading to confusion and isolation.
-- **Manual Processes**: Reliance on spreadsheets and paper-based reports creates inefficiencies and increases the administrative burden.
-- **Lack of Accountability**: Tracking intern progress is cumbersome, resulting in delays in feedback and oversight.
-
-## Existing Systems
-Traditional internship management systems are fragmented and disconnected, relying heavily on manual processes. This leads to:
-- Delays in feedback and guidance for interns.
-- Ineffective tracking of intern activities.
-- A lack of a centralized platform for communication among stakeholders.
-
-## Proposed Solution: InternSync
-InternSync is a comprehensive web and mobile platform designed to streamline the management and tracking of internship activities. By automating and centralizing the internship management process, InternSync enhances communication and oversight for all parties involved.
+Internsync is a web platform designed to streamline the management and tracking of internship activities for interns, college mentors, and company mentors during the eighth
+semester. It replaces traditional Excel-based systems by centralizing the submission and review of daily reports, allowing interns to submit their internship details and daily progress directly through the platform. College mentors benefit from automated weekly performance summaries via analytics dashboards, enabling continuous monitoring and feedback.
 
 ### Key Features
 - **Centralized Management**: Automates daily report submission process and provides analytics dashboards for performance monitoring.
@@ -72,24 +55,35 @@ To set up the project locally, follow these steps:
    cd web
    npm install
    ```
-3. Set up Supabase:
-- Create a Supabase Account:
-  - Go to Supabase and sign up for a free account.
-  - Create a new project in your dashboard.
+3. Set up Supabase
+   
+   - Create a Supabase Account : 
+     - Go to Supabase and sign up for a free account.
+     - Create a new project in your dashboard.
 
-- Add Email Providers (SMTP):
-    In Supabase, go to Authentication > Settings > Email provider and configure your SMTP details.
+   - Add Email Providers (SMTP) :
+        In Supabase, go to Authentication > Settings > Email provider and configure your SMTP details.
   
-- Update Email Templates:
-    Customize email templates under Authentication > Templates in Supabase as needed.
+   - Update Email Templates :
+     - Customize email templates under Authentication > Templates in Supabase as needed.
+     - List of Email templates to change
+       - Confirm signup
+       - Invite user
+       - Reset password  
   
-- Configure URL Settings:
-    In Settings > Site URL, add http://localhost:3000 for local development.
+   - Configure URL Settings :
+        In Settings > Site URL, add the below url for local development.
+     - Site URL
+       - http://localhost:3000
+     - Redirect URLs
+       - http://localhost:3000/set-password
+       - http://localhost:3000/update-password
+       - http://localhost:3000/verify-email
   
-- Add SQL Queries and Functions:
-  - In the SQL Editor in Supabase, add the necessary SQL queries and functions.
-  - Run each script directly in the editor.
-  - Note : The Supabase Functions are provided in the repository folder at ![supabase/sql](https://github.com/Swaraj2004/supabase/sql)
+   - Add SQL Queries and Functions :
+     - In the SQL Editor in Supabase, add the necessary SQL queries and functions.
+     - Run each script directly in the editor.
+     - Note : The Supabase Functions are provided in the repository folder at ![supabase/sql](https://github.com/Swaraj2004/supabase/sql)
 
 4. **Set up environment variables**:
    Create a `.env.local` file in the web directory and add your Supabase credentials:
@@ -110,19 +104,3 @@ To set up the project locally, follow these steps:
 
 
 6. Open [http://localhost:3000](http://localhost:3000) on your browser to see the result.
-
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
